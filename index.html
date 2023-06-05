@@ -5,12 +5,10 @@
 </head>
 
 <body>
-	<h1>Latest Release Version from GitHub</h1>
-
 	<p id="result"></p>
 
 	<script>
-		const url = "https://api.github.com/repos/<your-username>/<your-repo>/releases/latest";
+		const url = "https://api.github.com/repos/hostlift/hostlift/releases/latest"; // make sure to remove placeholders before going live
 
 		async function getLatestRelease() {
 			try {
