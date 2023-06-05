@@ -16,7 +16,7 @@
 			try {
 				const response = await fetch(url);
 				const data = await response.json();
-				document.getElementById("result").innerText = `The latest release version is: ${data.tag_name}`;
+				document.getElementById("result").innerText = `${data.name}`;
 			} catch (error) {
 				console.error(error);
 			}
