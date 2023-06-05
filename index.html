@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Latest Release Version from GitHub</title>
+</head>
+
+<body>
+	<h1>Latest Release Version from GitHub</h1>
+
+	<p id="result"></p>
+
+	<script>
+		const url = "https://api.github.com/repos/<your-username>/<your-repo>/releases/latest";
+
+		async function getLatestRelease() {
+			try {
+				const response = await fetch(url);
+				const data = await response.json();
+				document.getElementById("result").innerText = `The latest release version is: ${data.tag_name}`;
+			} catch (error) {
+				console.error(error);
+			}
+		}
+
+		getLatestRelease();
+	</script>
+</body>
+</html>
